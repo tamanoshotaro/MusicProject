@@ -16,7 +16,7 @@ public class MyCanvas : MonoBehaviour {
 	public static void SetActive(string name, bool b){
 		Debug.Log ("test");
 		foreach (Transform child in _canvas.transform) {
-			if (child.tag == name && child.gameObject.active == true) {
+			if (child.tag == name && child.gameObject.active == true) { //==trueはなくても可 if文の中はtrue前提なので
 				child.gameObject.SetActive (b);
 				return;
 			}
