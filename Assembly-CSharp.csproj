@@ -54,6 +54,7 @@
      <Compile Include="Assets\TapButton.cs" />
      <Compile Include="Assets\TapDelete.cs" />
      <Compile Include="Assets\TapLine.cs" />
+     <Compile Include="Assets\TapPoint.cs" />
      <Compile Include="Assets\ThroughDelete.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity5.5.1/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>

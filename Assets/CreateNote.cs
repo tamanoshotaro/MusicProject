@@ -9,42 +9,47 @@ public class CreateNote : MonoBehaviour {
 	Vector2 createPoint;
 	GameObject parent;
 
-	//public Vector3 posit = new Vector3 (-10, 0, 0);
-
-	//private int index = 0;
+	public Vector3 posit = new Vector3 (-10, 0, 0);
+	private int index = 0;
 
 	// Use this for initialization
 	void Start () {
-		StartSpawn ();
-
+		
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		
-		//if (Beat.timer >= Beat.timing [index] - 1) {
-		createPoint = new Vector2(Random.Range(419.5f,419.5f), Random.Range(500f,500f));
-			//index++;
-		//}
-	}
+		Debug.Log (index);
+		if (TapPoint.timer >= TapPoint.timing [index] - 1) {
+			createPoint = new Vector2 (Random.Range (419.5f, 419.5f), Random.Range (500f, 500f));
+			//StartSpawn ();
+			SpawnNotes ();
 
-
-	IEnumerator SpawnNotes(){
-		parent = GameObject.FindGameObjectWithTag("Canvas");
-		while (true) {
-			Instantiate(spawnObject, createPoint, transform.rotation, parent.transform);
-			yield return new WaitForSeconds (1f);
+			if (TapPoint.timing.Length - 1 > index) {
+				index++;
+			} else {
+				//ここに終了処理書きたい（とりあえず）
+			}
+			Debug.Log (index);
 		}
 	}
 
 
+	public void SpawnNotes(){
+		parent = GameObject.FindGameObjectWithTag("Canvas");
+		Instantiate(spawnObject, createPoint, transform.rotation, parent.transform);
+	}
+
+
+	/*
 	public void StartSpawn(){
 		StartCoroutine ("SpawnNotes");
 	}
 
 	public void StopSpawn(){
 		StopCoroutine ("SpawnNotes");
-	}
+	}*/
 
 
 

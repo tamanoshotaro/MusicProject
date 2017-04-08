@@ -9,6 +9,8 @@ TagManager:
   - Button-C
   - Button-R
   - Button-RR
+  - Panel
+  - Canvas
   layers:
   - Default
   - TransparentFX
