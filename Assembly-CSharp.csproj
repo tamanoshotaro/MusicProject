@@ -49,7 +49,9 @@
      <Compile Include="Assets\CreateNote.cs" />
      <Compile Include="Assets\LineDestroy.cs" />
      <Compile Include="Assets\MyCanvas.cs" />
+     <Compile Include="Assets\NoteStatus.cs" />
      <Compile Include="Assets\ScoreCount.cs" />
+     <Compile Include="Assets\TagAdd.cs" />
      <Compile Include="Assets\TapArea.cs" />
      <Compile Include="Assets\TapButton.cs" />
      <Compile Include="Assets\TapDelete.cs" />

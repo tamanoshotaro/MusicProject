@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class TapButton : MonoBehaviour {
 
+	//タップしてノーツを消す処理
+
+
 	// Use this for initialization
 	void Start () {
 		
