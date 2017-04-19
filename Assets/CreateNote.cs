@@ -9,40 +9,19 @@ public class CreateNote : MonoBehaviour {
 
 
 	public GameObject spawnObject;
-	public float interval = 5f;
 	Vector2 createPoint;
 	GameObject parent;
-
-	public Vector3 posit = new Vector3 (-10, 0, 0);
-	private int index = 0;
 	public int p;
 
+	IEnumerator Start(){
 
-	public float timeOut;
-	private float timeElapsed;
-
-	//public float[] position = {219.5f, 319.5f, 419.5f, 519.5f, 619.5f};
-
-
-	// Use this for initialization
-	/*
-	void Start () {
-		
-	}*/
-
-	void Start () {
-		//Debug.Log (index);
-		//if (TapPoint.timer >= TapPoint.timing [index] - 1) {
-		//int p = 0;
-		for(p = 0; p < 5; p++){
+		for(p = 0; p < 6; p++){
 			NoteStatus notepotition = GetComponent<NoteStatus> ();
 
-			//int p = 0;
-			//if(p < 7){
 			NoteStatus note3 = GetComponent<NoteStatus> ();
 
 
-				float x = note3.notesdata[p,0];
+			float x = note3.notesdata[p,0];
 			float y = 500f;
 			//ここでポイントの指定をしている
 			//その読み取り先というのをどうするか…NotesStatusからが良いのか…？
@@ -57,26 +36,22 @@ public class CreateNote : MonoBehaviour {
 			//Rangeの()内をxとyにして代入する形式にした
 
 
-			//StartSpawn ();
 
 			SpawnNotes ();
 
 				Debug.Log ("繰り返し" + p);
-				//p++;
-			//}
+			yield return new WaitForSeconds (1.0f);
 
-			/*
-			if (TapPoint.timing.Length - 1 > index){
-				index++;
-				} else {
-				Debug.Log ("終了");
-					//ここに終了処理書きたい（とりあえず）
-				}
-				*/
-				//Debug.Log (index);
+
 			}
 
 	}
+
+	void Cor(){
+		StartCoroutine ("Start");
+	}
+
+
 
 
 	public void SpawnNotes(){
@@ -102,24 +77,7 @@ public class CreateNote : MonoBehaviour {
 
 
 	}
-
-
-	/*
-	public void StartSpawn(){
-		StartCoroutine ("SpawnNotes");
-	}
-
-	public void StopSpawn(){
-		StopCoroutine ("SpawnNotes");
-	}*/
-
-	void Update(){
-		timeElapsed += Time.deltaTime;
-		if (timeElapsed >= timeOut) {
-			timeElapsed = 1.0f;
-		}
 		
-	}
 
 
 }
