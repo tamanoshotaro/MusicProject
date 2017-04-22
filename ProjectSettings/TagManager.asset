@@ -11,6 +11,7 @@ TagManager:
   - Button-RR
   - Panel
   - Canvas
+  - GameMusic
   layers:
   - Default
   - TransparentFX

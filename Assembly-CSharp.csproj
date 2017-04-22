@@ -47,8 +47,11 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\CreateNote.cs" />
+     <Compile Include="Assets\GameManager.cs" />
      <Compile Include="Assets\LineDestroy.cs" />
+     <Compile Include="Assets\Music.cs" />
      <Compile Include="Assets\MyCanvas.cs" />
+     <Compile Include="Assets\NoteScript.cs" />
      <Compile Include="Assets\NoteStatus.cs" />
      <Compile Include="Assets\ScoreCount.cs" />
      <Compile Include="Assets\TagAdd.cs" />
@@ -58,6 +61,7 @@
      <Compile Include="Assets\TapLine.cs" />
      <Compile Include="Assets\TapPoint.cs" />
      <Compile Include="Assets\ThroughDelete.cs" />
+     <Compile Include="Assets\TimeManager.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity5.5.1/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
